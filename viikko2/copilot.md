@@ -1,0 +1,6 @@
+- Koin Copilotin koodin täydennyksen ehdotukset hyödyllisiksi. 
+- Copilotin selitys Pylint-varoituksesta piti paikkansa.
+- Agentti teki sekä toimivan ratkaisun että testit.
+- Pylint ei löytänyt agentin tekemästä koodista virheitä.
+- Testit tehtiin samoilla pääperiaatteilla kuin viime viikolla. 
+- Opin käyttämään Copilotin koodintäydennystä sekä Ask- ja Agent-tiloja ja hyödyntämään agenttia Visual Studio Codessa.
