@@ -32,22 +32,23 @@ def print_players(players, season, nationality):
     console = Console()
     console.print(table)
 
-
-def main():
+def ask_season():
     seasons = [
         '2018-19', '2019-20', '2020-21', '2021-22',
         '2022-23', '2023-24', '2024-25', '2025-26'
     ]
 
-    season = Prompt.ask(
+    return Prompt.ask(
         'Season',
         choices=seasons,
         default='2024-25'
     )
 
+def main():
+    season = ask_season()
+
     url = f'https://studies.cs.helsinki.fi/nhlstats/{season}/players'
-    reader = PlayerReader(url)
-    stats = PlayerStats(reader)
+    stats = PlayerStats(PlayerReader(url))
     nationalities = stats.get_nationalities()
 
     while True:
