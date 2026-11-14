@@ -35,3 +35,14 @@ Go To Starting Page
 
 Register Page Should Be Open
     Get Url    ==    ${REGISTER_URL}
+
+Set Username
+    [Arguments]  ${username}
+    Fill Text  id=username  ${username}
+
+Set Password
+    [Arguments]  ${password}
+    Fill Secret  id=password  $password
+
+Go To Register Page
+    Go To  ${REGISTER_URL}

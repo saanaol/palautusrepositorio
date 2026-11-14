@@ -7,7 +7,7 @@ Test Setup      Reset Application Create User And Go To Login Page
 *** Test Cases ***
 Login With Correct Credentials
     Set Username  kalle
-    Set Password  kalle123
+    Set Password  kalle1234
     Click  button >> text=Login
     Login Should Succeed
 
@@ -32,15 +32,7 @@ Login Should Fail With Message
     Login Page Should Be Open
     Get Text  body  *=  ${message}
 
-Set Username
-    [Arguments]  ${username}
-    Fill Text  id=username  ${username}
-
-Set Password
-    [Arguments]  ${password}
-    Fill Secret  id=password  $password
-
 Reset Application Create User And Go To Login Page
     Reset Application
-    Create User  kalle  kalle123
+    Create User  kalle  kalle1234
     Go To Login Page
